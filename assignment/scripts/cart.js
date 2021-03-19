@@ -17,7 +17,7 @@ console.log('Test - should be 3 items in basket', basket); // Testing function
 // Create a function called listItems
 function listItems( ){
 console.log('Using "listItems" function;');
-  for (object of basket) {
+  for (let object of basket) {
     console.log(object);
   }
 }
@@ -46,15 +46,27 @@ console.log('Test - should say false', isFull()); // Testing function
 
 // 3.
 function addItemUpdated(item){
-  if (isFull() = false) {
+  if (isFull() === false) {
     console.log('Using "addItem" function;', item);
     basket.push(item);
     return true;
   } return false;
 }
 
-addItemUpdated('Item1');
-addItemUpdated('Item2');
-addItemUpdated('Item3');
-addItemUpdated('Item4');
-console.log('Test - should say true', addItemUpdated());
+addItemUpdated('Item1'); // Calling function
+addItemUpdated('Item2'); // Calling function
+addItemUpdated('Item3'); // Calling function
+addItemUpdated('Item4'); // Calling function
+console.log('Test - should say true', addItemUpdated()); // Testing function
+console.log('Test - should be 4 items', basket); // Testing function
+addItemUpdated('Item5'); // Calling function
+addItemUpdated('Item6'); // Calling function
+console.log('Test - should be say false', addItemUpdated()); // Testing function
+console.log('Test - should be 5 items', basket); // Testing function
+// After using the addItemUpdated function to add 4 items, a 'undefined' item was
+// added the the basket as well. I am not sure why that's happening...
+
+// 4.
+function removeItem( item ){
+
+}
