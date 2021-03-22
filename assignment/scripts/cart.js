@@ -63,10 +63,19 @@ addItemUpdated('Item5'); // Calling function
 addItemUpdated('Item6'); // Calling function
 console.log('Test - should be say false', addItemUpdated()); // Testing function
 console.log('Test - should be 5 items', basket); // Testing function
-// After using the addItemUpdated function to add 4 items, a 'undefined' item was
-// added the the basket as well. I am not sure why that's happening...
+// ** After using the addItemUpdated function to add 4 items, a 'undefined' item was
+// added the the basket as well. I am not sure why that's happening...**
 
 // 4.
+let pets = ['dog', 'cat', 'parrot', 'goldfish', 'iguana'];
 function removeItem( item ){
-
+  console.log('In q4 function', pets);
+  for (let i=0; i <pets.length; i++){
+    console.log(item);
+    if (item = pets.indexOf(i)){
+      console.log(pets, item);
+      return pets.splice([i], 1);
+    } return null;
+  }
 }
+console.log('Test - ', removeItem('parrot'));
